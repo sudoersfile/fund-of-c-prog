@@ -1,0 +1,33 @@
+Language: Cpp
+BasedOnStyle: LLVM
+
+AccessModifierOffset: -4
+AlignAfterOpenBracket: AlwaysBreak
+AllowAllConstructorInitializersOnNextLine: false
+AllowAllParametersOfDeclarationOnNextLine: false
+AllowShortBlocksOnASingleLine: Empty
+AllowShortIfStatementsOnASingleLine: Never
+AllowShortFunctionsOnASingleLine: Empty
+BinPackArguments: false
+BreakConstructorInitializers: BeforeColon
+ColumnLimit: 80
+ConstructorInitializerAllOnOneLineOrOnePerLine: true
+Cpp11BracedListStyle: false
+FixNamespaceComments: true
+IncludeBlocks: Regroup
+IncludeCategories:
+  - Regex: "<helios-[[:alnum:]./]+>"
+    Priority: 1
+  - Regex: '".*"'
+    Priority: 2
+  - Regex: "<[[:alnum:].]+>"
+    Priority: 3
+IndentWidth: 4
+NamespaceIndentation: All
+PointerAlignment: Right
+SortIncludes: true
+SpaceBeforeCpp11BracedList: true
+SpaceBeforeInheritanceColon: true
+SpaceBeforeParens: ControlStatements
+TabWidth: 4
+UseTab: Never

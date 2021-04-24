@@ -1,0 +1,17 @@
+{
+  "C_Cpp.autoAddFileAssociations": false,
+  "editor.formatOnSave": true,
+  "files.associations": {
+    ".clang-format": "yaml"
+  },
+  "mesonbuild.configureOnOpen": true,
+  "mesonbuild.buildFolder": "bin",
+  "[meson]": {
+    "editor.tabSize": 2,
+  },
+  "[yaml]": {
+      "editor.insertSpaces": true,
+      "editor.tabSize": 2,
+      "editor.autoIndent": "advanced"
+  }
+}
