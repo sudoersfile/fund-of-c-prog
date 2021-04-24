@@ -2,6 +2,7 @@
 
 # Objects and executable
 bin/
+obj/
 
 # Miscellaneous files
 .DS_Store

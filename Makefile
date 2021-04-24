@@ -3,20 +3,37 @@
 
 # Compiler options
 CC = gcc
-CFLAGS = -Wall -Werror -ansi
+CCFLAGS = -Wall -Werror -ansi
 
-# Program name
-PRG = main
+# Folders
+BIN := ./bin
+OBJ := ./obj
+SRC := ./src
 
-# Dependencies
-OUT = $(PRG).out
-OBJ = ./obj
-SRC = ./src
+# TODO: Ed expects the executable to be in the root directory.
+PROGRAM := $(BIN)/main.out
+SOURCES := $(wildcard $(SRC)/*.c)
+OBJECTS := $(patsubst $(SRC)/%.c, $(OBJ)/%.o, $(SOURCES))
 
-# TODO - Edit rules below
+# To compile the program, we need the objects files
+$(PROGRAM): $(OBJECTS)
+	@echo 'Compiling program...'
+	@$(CC) $^ -o $@
 
-$(OUT): main.o
-	$(CC) $(CFLAGS) -o main.out main.o
+# To create the object files, we need the source files
+$(OBJ)/%.o: $(SRC)/%.c creating_objects
+	@$(CC) $(CCFLAGS) -c $< -o $@
 
-$(OUT): main.c
-	$(CC) $(CFLAGS) -c -o main.o main.c
+creating_objects:
+	@echo 'Creating objects...'
+
+# Run command
+.PHONY: run
+run: $(PROGRAM)
+	@$(PROGRAM)
+
+# Clean command
+.PHONY: clean
+clean:
+	@rm -rf $(OBJ)/*.o
+	@rm -rf $(BIN)/*

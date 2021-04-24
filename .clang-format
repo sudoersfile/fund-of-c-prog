@@ -16,12 +16,12 @@ Cpp11BracedListStyle: false
 FixNamespaceComments: true
 IncludeBlocks: Regroup
 IncludeCategories:
-  - Regex: "<helios-[[:alnum:]./]+>"
-    Priority: 1
-  - Regex: '".*"'
-    Priority: 2
-  - Regex: "<[[:alnum:].]+>"
-    Priority: 3
+    - Regex: "<helios-[[:alnum:]./]+>"
+      Priority: 1
+    - Regex: '".*"'
+      Priority: 2
+    - Regex: "<[[:alnum:].]+>"
+      Priority: 3
 IndentWidth: 4
 NamespaceIndentation: All
 PointerAlignment: Right
