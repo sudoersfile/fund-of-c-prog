@@ -66,6 +66,6 @@
  * Main function
  ******************************************************************************/
 int main(void) {
-    print_message("Hello, world!");
+    print_message("Goodbye, world!");
     return 0;
 }
