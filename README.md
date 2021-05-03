@@ -1,6 +1,7 @@
 # 48430 Fundamental of C Programming – Assignment 3
 
-This is a text encryption, decryption and compression program.
+A text encryption, decryption and compression program for Assignment 3 in
+Fundamentals of C Programming.
 
 ## Subject details
 
@@ -9,9 +10,9 @@ This is a text encryption, decryption and compression program.
 
 ## Group members
 
-  * Hugh Hannan (13193204)
+  * Hugh James Seagrave Hannan (13193204)
   * Mohammed Ta-Seen Islam (13215660)
-  * Mouhammad Haisam Atif (14065181)
+  * Muhammad Haisam Atif (14065181)
   * Larissa Al Youssef (14267102)
   * Sumanyu Khemlani (13056092)
 
@@ -23,11 +24,22 @@ the following commands:
 ```shell
 $ make         # Compile the program
 $ make run     # Compile and run the program
-$ make test    # Test the program
+$ make test    # Test the program (not yet configured)
+$ make clean   # Removes all files in the `./bin` and `./out` folders
 ```
 
 As you can tell, this program uses `make` to compile the program. Make sure
 sure have it installed if you want to compile it on your own computer.
+
+## What we could achieve:
+
+Before next week we need to write an outline describing what we plan to do and
+how we plan to do it. We also need to write out all the main functions we plain
+to implement into our program as well as more or less finish one or two of them.
+
+## What we couldn't achieve:
+
+*TODO*
 
 ## References:
 
