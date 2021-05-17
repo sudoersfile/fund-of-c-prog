@@ -8,10 +8,8 @@
  ******************************************************************************/
 
 /**
- * Compresses a string using the Run-Length Encoding algorithm.
- *
- * @author Muhammad Atif
- * @author Sumanyu Khemlani
+ * @brief           Compresses a string using the Run-Length Encoding algorithm.
+ * @author          MA & SK
  *
  * @param input     The text to compress.
  * @param output    The destination of the final compressed output.
@@ -21,10 +19,8 @@
 int compress(char *input, char *output);
 
 /**
- * Decompresses the given string.
- *
- * @author Muhammad Atif
- * @author Sumanyu Khemlani
+ * @brief           Decompresses the given string.
+ * @author          MA & SK
  *
  * @param input     The text to decompress.
  * @param output    The destination of the final decompressed output.

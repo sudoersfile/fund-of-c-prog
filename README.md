@@ -5,16 +5,16 @@ Fundamentals of C Programming.
 
 ## Subject details
 
-  * Lab 03 (4pm-6pm Monday)
-  * Group 03
+-   Lab 03 (4pm-6pm Monday)
+-   Group 03
 
 ## Group members
 
-  * Hugh James Seagrave Hannan (13193204)
-  * Mohammed Ta-Seen Islam (13215660)
-  * Muhammad Haisam Atif (14065181)
-  * Larissa Al Youssef (14267102)
-  * Sumanyu Khemlani (13056092)
+-   Hugh James Seagrave Hannan (13193204) [HH]
+-   Mohammed Ta-Seen Islam (13215660) [TI]
+-   Muhammad Haisam Atif (14065181) [MA]
+-   Larissa Al Youssef (14267102) [LY]
+-   Sumanyu Khemlani (13056092) [SK]
 
 ## Compiling instructions
 
@@ -33,17 +33,15 @@ sure have it installed if you want to compile it on your own computer.
 
 ## What we could achieve:
 
-Before next week we need to write an outline describing what we plan to do and
-how we plan to do it. We also need to write out all the main functions we plain
-to implement into our program as well as more or less finish one or two of them.
+_TODO_
 
 ## What we couldn't achieve:
 
-*TODO*
+_TODO_
 
 ## References:
 
-  * http://www.trytoprogram.com/c-examples/c-program-to-encrypt-and-decrypt-string/
-  * https://en.wikipedia.org/wiki/Salt_(cryptography)
-  * http://rosettacode.org/wiki/Run-length_encoding#C
-  * https://www.geeksforgeeks.org/rsa-algorithm-cryptography/
+-   http://www.trytoprogram.com/c-examples/c-program-to-encrypt-and-decrypt-string/
+-   https://en.wikipedia.org/wiki/Salt_(cryptography)
+-   http://rosettacode.org/wiki/Run-length_encoding#C
+-   https://www.geeksforgeeks.org/rsa-algorithm-cryptography/

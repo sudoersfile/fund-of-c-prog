@@ -3,12 +3,13 @@
 
 # Compiler options
 CC = gcc
-CCFLAGS = -Wall -Werror -ansi
+CCFLAGS = -Wall -Werror -ansi -lm
 
 # Folders
 BIN := ./bin
 OBJ := ./obj
 SRC := ./src
+TST := ./test
 
 # TODO: Ed expects the executable to be in the root directory.
 PROGRAM := $(BIN)/main.out
@@ -19,6 +20,7 @@ OBJECTS := $(patsubst $(SRC)/%.c, $(OBJ)/%.o, $(SOURCES))
 $(PROGRAM): $(OBJECTS)
 	@echo 'Compiling program...'
 	@$(CC) $^ -o $@
+	@echo 'Done.'
 
 # To create the object files, we need the source files
 $(OBJ)/%.o: $(SRC)/%.c creating_objects

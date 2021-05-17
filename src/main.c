@@ -6,15 +6,15 @@
  *
  * Name and student ID:
  *
- *   - Hugh Hannan (13193204)
- *   - Mohammed Ta-Seen Islam (13215660)
- *   - Muhammad Haisam Atif (14065181)
- *   - Larissa Al Youssef (14267102)
- *   - Sumanyu Khemlani (13056092)
+ *   - Hugh James Seagrave Hannan (13193204) [HH]
+ *   - Mohammed Ta-Seen Islam (13215660) [TI]
+ *   - Muhammad Haisam Atif (14065181) [MA]
+ *   - Larissa Al Youssef (14267102) [LY]
+ *   - Sumanyu Khemlani (13056092) [SK]
  *
  * Date of submission:
  *
- *   2021-XX-XX
+ *   2021-05-28
  *
  * Please refer to `README.md` in the root of this project for compiling
  * instructions and a list of what we could and couldn't achieve.
@@ -25,13 +25,15 @@
 #include "compression.h"
 #include "encryption.h"
 
-#include <math.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+#include <stdio.h> /* printf, puts, scanf */
+
+#if DEBUG_MODE
+#include <stdlib.h> /* free, malloc */
+#include <string.h> /* strlen */
+#endif
 
 /*******************************************************************************
- * User-defined types.
+ * User-defined types
  ******************************************************************************/
 
 enum {
@@ -41,10 +43,18 @@ enum {
 };
 
 /*******************************************************************************
- * Function prototypes
+ * Functions
  ******************************************************************************/
 
-void print_menu(void);
+/**
+ * Prints a user-friendly menu describing all the possible actions this program
+ * can perform.
+ */
+void print_menu(void) {
+    printf("1. Compress and encrypt text\n"
+           "2. Decompress and decrypt text\n"
+           "3. Exit the program\n");
+}
 
 /*******************************************************************************
  * Main function
@@ -81,8 +91,28 @@ int main(void) {
     return 0;
 }
 
-void print_menu(void) {
-    printf("1. Compress and encrypt text\n"
-           "2. Decompress and decrypt text\n"
-           "3. Exit the program\n");
-}
+/*
+
+    To test compress function
+    char string[MAX_LENGTH];
+    char sutput[MAX_LENGTH*2];
+
+    printf("Enter string: ");
+    scanf("[^\n]",string);
+
+    int c = compress(string,sutput);
+
+
+    char *input = "hello, world!";
+    char *key = "asdfghjlicvbm";
+
+    size_t input_len = strlen(input);
+    char *output = (char *)malloc(input_len * 2);
+
+    if (encrypt(input, key, output) == 0) {
+        printf("'%s'\n", output);
+    }
+
+    free(output);
+
+ */

@@ -8,10 +8,8 @@
  ******************************************************************************/
 
 /**
- * Encrypts the given text.
- *
- * @author Hugh Hannan
- * @author Ta-Seen Islam
+ * @brief           Encrypts the given text.
+ * @author          HH & TI
  *
  * @param input     The null-terminated text to encrypt (of any size).
  * @param key       A unique key to salt the output.
@@ -23,10 +21,8 @@
 int encrypt(const char *input, const char *key, const char *output);
 
 /**
- * Decrypts the given encrypted value.
- *
- * @author Hugh Hannan
- * @author Ta-Seen Islam
+ * @brief           Decrypts the given encrypted value.
+ * @author          HH & TI
  *
  * @param input     An encrypted text to be decrypted.
  * @param key       The salt key to un-salt the output.
