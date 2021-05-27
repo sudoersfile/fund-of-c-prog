@@ -1,10 +1,10 @@
-#ifndef ENCRYPTER_H
-#define ENCRYPTER_H
+#ifndef ENCRYPTION_H
+#define ENCRYPTION_H
 
 #include "common.h"
 
 /*******************************************************************************
- * LIST PREPROCESSING DIRECTIVES
+ * PREPROCESSING DIRECTIVES
  ******************************************************************************/
 
 /* TODO: Remove this */
@@ -82,4 +82,4 @@ int encrypt(const char *input, const char *key, char *output);
  ******************************************************************************/
 int decrypt(const char *input, const char *key, char *output);
 
-#endif /* ENCRYPTER_H */
+#endif /* ENCRYPTION_H */

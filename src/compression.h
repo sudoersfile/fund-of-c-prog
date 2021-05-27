@@ -1,10 +1,10 @@
-#ifndef COMPRESSER_H
-#define COMPRESSER_H
+#ifndef COMPRESSION_H
+#define COMPRESSION_H
 
 #include "common.h"
 
 /*******************************************************************************
- * Function prototypes
+ * FUNCTION PROTOTYPES
  ******************************************************************************/
 
 /*******************************************************************************
@@ -23,4 +23,4 @@ int compress(const char *input, char *output);
  ******************************************************************************/
 int decompress(const char *input, char *output);
 
-#endif /* COMPRESSER_H */
+#endif /* COMPRESSION_H */

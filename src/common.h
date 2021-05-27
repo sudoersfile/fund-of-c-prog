@@ -4,7 +4,7 @@
 #include "stdio.h" /* printf, puts */
 
 /*******************************************************************************
- * LIST PREPROCESSING DIRECTIVES
+ * PREPROCESSING DIRECTIVES
  ******************************************************************************/
 
 /** Determines if program is in DEBUG mode. */
