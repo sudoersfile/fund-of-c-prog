@@ -3,7 +3,8 @@
 
 # Compiler options
 CC = gcc
-CCFLAGS = -Wall -Werror -ansi -lm
+CCFLAGS = -Wall -ansi # Allow warnings for now
+# CCFLAGS = -Wall -Werror -ansi -lm
 
 # Folders
 BIN := ./bin
@@ -21,6 +22,7 @@ $(PROGRAM): $(OBJECTS)
 	@echo 'Compiling program...'
 	@$(CC) $^ -o $@
 	@echo 'Done.'
+	@echo
 
 # To create the object files, we need the source files
 $(OBJ)/%.o: $(SRC)/%.c creating_objects

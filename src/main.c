@@ -1,16 +1,16 @@
 /*******************************************************************************
  * 48430 Fundamentals of C Programming - Assignment 3
  *
- * Lab Number: 03 4pm-6pm Monday
+ * Lab Number: 03 (4pm-6pm Monday)
  * Group Number: 03
  *
  * Name and student ID:
  *
- *   - Hugh James Seagrave Hannan (13193204) [HH]
- *   - Mohammed Ta-Seen Islam (13215660) [TI]
- *   - Muhammad Haisam Atif (14065181) [MA]
- *   - Larissa Al Youssef (14267102) [LY]
- *   - Sumanyu Khemlani (13056092) [SK]
+ *   - Hugh James Seagrave Hannan (13193204)
+ *   - Mohammed Ta-Seen Islam (13215660)
+ *   - Muhammad Haisam Atif (14065181)
+ *   - Larissa Al Youssef (14267102)
+ *   - Sumanyu Khemlani (13056092)
  *
  * Date of submission:
  *
@@ -33,9 +33,12 @@
 #endif
 
 /*******************************************************************************
- * User-defined types
+ * USER-DEFINED TYPES
  ******************************************************************************/
 
+/*******************************************************************************
+ * A enumeration of all the possible choices in the menu.
+ ******************************************************************************/
 enum {
     CHOICE_ENCRYPT = 1,
     CHOICE_DECRYPT,
@@ -43,13 +46,21 @@ enum {
 };
 
 /*******************************************************************************
- * Functions
+ * FUNCTIONS
  ******************************************************************************/
 
-/**
+/*******************************************************************************
+ * Author: Ta-Seen
+ *
  * Prints a user-friendly menu describing all the possible actions this program
  * can perform.
- */
+ *
+ * Inputs:
+ *   None
+ *
+ * Output:
+ *   None
+ ******************************************************************************/
 void print_menu(void) {
     printf("1. Compress and encrypt text\n"
            "2. Decompress and decrypt text\n"
@@ -59,8 +70,27 @@ void print_menu(void) {
 /*******************************************************************************
  * Main function
  ******************************************************************************/
-
 int main(void) {
+/* Set DEBUG_MODE to 1 if you want to test your function directly.
+ * Set DEBUG_MODE to 0 if you want to test what the user will see.
+ * (No need to return 0 as it is at the very end of the main function.) */
+#if DEBUG_MODE
+    char *input = "This is a sample unencrypted text.";
+    char *key = "my-password-123";
+
+    size_t input_len = strlen(input);
+    char *output = (char *)malloc(input_len * 2);
+
+    int error_code = encrypt(input, key, output);
+    if (error_code) {
+        print_error_message(ERROR_UNHANDLED_OVERFLOW);
+        return error_code;
+    } else {
+        printf("Encrypted text: %s\n", output);
+    }
+
+    free(output);
+#else
     puts("\nEncryption Program " PROGRAM_VERSION "\n");
 
     int choice;
@@ -77,6 +107,7 @@ int main(void) {
             puts("Sorry, decryption is not available at the moment.");
             break;
         case CHOICE_EXIT:
+            /* Exit the program */
             puts("Goodbye.");
             return 0;
         default:
@@ -87,32 +118,7 @@ int main(void) {
         /* Add a newline before the next menu */
         printf("\n");
     } while (choice != CHOICE_EXIT);
+#endif
 
     return 0;
 }
-
-/*
-
-    To test compress function
-    char string[MAX_LENGTH];
-    char sutput[MAX_LENGTH*2];
-
-    printf("Enter string: ");
-    scanf("[^\n]",string);
-
-    int c = compress(string,sutput);
-
-
-    char *input = "hello, world!";
-    char *key = "asdfghjlicvbm";
-
-    size_t input_len = strlen(input);
-    char *output = (char *)malloc(input_len * 2);
-
-    if (encrypt(input, key, output) == 0) {
-        printf("'%s'\n", output);
-    }
-
-    free(output);
-
- */
